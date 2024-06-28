@@ -2,13 +2,16 @@ import React from "react";
 import "./index.css";
 
 const Card = (props) => {
-    console.log("PROPS",props)
+  // const props = { data: { name: "arsalan", email: "arsalan.jamia@gmail.com" } };
+
+  const { data } = props;
+    console.log("PROPS",data)
   return (
     <>
       <div className="card">
-        <h1>{props.userName}</h1>
+        <h1>{data.name}</h1>
         <p>
-          {props.description}
+          {data.email}
         </p>
       </div>
     </>

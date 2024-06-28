@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import Form from "./components/Form";
 import Input from "./components/InputField";
 import Card from "./contents/Card";
+import CardData from "./components/Usestate";
 
 function App() {
   // const cardsData = [
@@ -115,17 +116,32 @@ function App() {
   const [toggle, setToggle] = useState(false);
 
   const handleMode = () => {
-    setToggle(!toggle)
-  }
+    setToggle(!toggle);
+  };
+
+  // Object Destructuring
 
   const obj = { name: "arsalan", email: "arsalan.jamia@gmail.com" };
-
   
+  const {name , email} = obj
 
+  // Array Destructuring
+
+  const arr = ["arsalan", "ashish", "abhay"];
+
+  const [x1, x2, x3] = arr;
+
+  console.log("X-----", x1, x2, x3, arr[0]);
 
   return (
     <>
-      <Card data={obj} />
+      <CardData />
+      {/* <h1>{email}</h1>
+      <h2>{ name}</h2> */}
+      {/* <h1>{x2}</h1>
+      <h1>{x3}</h1> */}
+       {/* {data:  { name: "arsalan", email: "arsalan.jamia@gmail.com" }} */}
+      {/* <Card data={obj} />  */}
       {/* <button
         onClick={handleMode}
         className={`${toggle ? "darkButton" : "lightButton"}`}
