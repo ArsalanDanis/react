@@ -4,6 +4,7 @@ import ProductCard from "../ProductCard";
 const CardData = () => {
   const [products, setProducts] = useState([]);
   const [userName, setUserName] = useState("");
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
@@ -15,6 +16,14 @@ const CardData = () => {
     setUserName("PIYUSH");
   };
 
+  const increamentFunction = () => {
+    setCount((previousCount) => previousCount + 1);
+  }
+
+   const decreamentFunction = () => {
+     setCount((previousCount) => previousCount - 1);
+  };
+  
   console.log("Products--------->", products);
 
   return (
@@ -29,9 +38,12 @@ const CardData = () => {
       >
         Products List
       </div>
-      <button type="button" onClick={handleButtonClick}>
+      <button onClick={decreamentFunction}>Decrement(-)</button>
+      <h1>Counter : {count}</h1>
+      <button onClick={increamentFunction}>Increament(+)</button>
+      {/* <button type="button" onClick={handleButtonClick}>
         Show Name
-      </button>
+      </button> */}
       <h1>{userName}</h1>
 
       <div

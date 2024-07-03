@@ -5,6 +5,9 @@ import Form from "./components/Form";
 import Input from "./components/InputField";
 import Card from "./contents/Card";
 import CardData from "./components/Usestate";
+import List from "./components/Items";
+import Counter from "./components/Counter";
+import ChildComponent from "./components/ChildComponent";
 
 function App() {
   // const cardsData = [
@@ -113,34 +116,54 @@ function App() {
   // const handleClose = () => {
   //   setShowBox(false);
   // };
-  const [toggle, setToggle] = useState(false);
+  // const [toggle, setToggle] = useState(false);
+  // const productList = [];
 
-  const handleMode = () => {
-    setToggle(!toggle);
-  };
+  // const handleMode = () => {
+  //   setToggle(!toggle);
+  // };
 
   // Object Destructuring
 
-  const obj = { name: "arsalan", email: "arsalan.jamia@gmail.com" };
+  // const obj = { name: "arsalan", email: "arsalan.jamia@gmail.com" };
   
-  const {name , email} = obj
+  // const {name , email} = obj
 
-  // Array Destructuring
+  // // Array Destructuring
 
-  const arr = ["arsalan", "ashish", "abhay"];
+  // const arr = ["arsalan", "ashish", "abhay"];
 
-  const [x1, x2, x3] = arr;
+  // const [x1, x2, x3] = arr;
 
-  console.log("X-----", x1, x2, x3, arr[0]);
+  // console.log("X-----", x1, x2, x3, arr[0]);
+
+
+  // const [count, setCount] = useState(0);
+
+   const [data, setData] = useState("");
+
+   const handleDataChange = (newData) => {
+     setData(newData);
+   };
+
+
+
 
   return (
     <>
-      <CardData />
+      <p>Data: {data}</p>
+      <ChildComponent onDataUpdate={handleDataChange} />
+  
+
+      {/* <Counter title="Counter Example" count={count} setCount={setCount} /> */}
+
+      {/* <List /> */}
+      {/* <CardData /> */}
       {/* <h1>{email}</h1>
       <h2>{ name}</h2> */}
       {/* <h1>{x2}</h1>
       <h1>{x3}</h1> */}
-       {/* {data:  { name: "arsalan", email: "arsalan.jamia@gmail.com" }} */}
+      {/* {data:  { name: "arsalan", email: "arsalan.jamia@gmail.com" }} */}
       {/* <Card data={obj} />  */}
       {/* <button
         onClick={handleMode}
