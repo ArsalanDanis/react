@@ -8,6 +8,19 @@ import CardData from "./components/Usestate";
 import List from "./components/Items";
 import Counter from "./components/Counter";
 import ChildComponent from "./components/ChildComponent";
+import UseEffect from "./components/Useeffect";
+import User from "./components/user";
+import Header from "./components/Header";
+import PrentComponet from "./components/Context";
+import { createContext } from "react";
+import UseRef from "./components/UseRef";
+import ScrollToTopButton from "./components/Scroll";
+import ColorChanger from "./components/ChangeBgColor";
+import Todos from "./components/UseReducer";
+import CounterReducer from "./components/CounterReducer";
+import TodoList from "./components/Todo";
+// export const UserContext = createContext();
+export const UserContext = createContext();
 
 function App() {
   // const cardsData = [
@@ -126,7 +139,7 @@ function App() {
   // Object Destructuring
 
   // const obj = { name: "arsalan", email: "arsalan.jamia@gmail.com" };
-  
+
   // const {name , email} = obj
 
   // // Array Destructuring
@@ -137,31 +150,43 @@ function App() {
 
   // console.log("X-----", x1, x2, x3, arr[0]);
 
-
   // const [count, setCount] = useState(0);
 
-   const [data, setData] = useState("");
+  //  const [data, setData] = useState("");
 
-   const handleDataChange = (newData) => {
-     setData(newData);
-   };
+  //  const handleDataChange = (newData) => {
+  //    setData(newData);
+  //  };
 
-
-
+  // const user = "Shivam";
 
   return (
     <>
+      <TodoList />
+      {/* <CounterReducer /> */}
+      {/* <input type="checkbox"  name="" id="" /><label htmlFor="">Male</label> */}
+      {/* <Todos /> */}
+      {/* <ColorChanger /> */}
+      {/* <ScrollToTopButton /> */}
+      {/* <UseRef /> */}
+      {/* <h1>UseContext</h1> */}
+      {/* <UserContext.Provider>
+        <PrentComponet value={user} />
+      </UserContext.Provider> */}
+      {/* <Header /> */}
+      {/* <h1>Hii Arsalan</h1>
+       <UseEffect />
+      <User />
       <p>Data: {data}</p>
-      <ChildComponent onDataUpdate={handleDataChange} />
-  
+      <ChildComponent onDataUpdate={handleDataChange} /> */}
 
-      {/* <Counter title="Counter Example" count={count} setCount={setCount} /> */}
+      {/* <Counter title="Counter Example" count={count} setCount={setCount} />
 
-      {/* <List /> */}
-      {/* <CardData /> */}
+      <List />
+      <CardData /> */}
       {/* <h1>{email}</h1>
-      <h2>{ name}</h2> */}
-      {/* <h1>{x2}</h1>
+      <h2>{ name}</h2>
+      <h1>{x2}</h1>
       <h1>{x3}</h1> */}
       {/* {data:  { name: "arsalan", email: "arsalan.jamia@gmail.com" }} */}
       {/* <Card data={obj} />  */}

@@ -1,22 +1,13 @@
 import React from "react";
-import { useState } from "react";
+import GrandChild from "../GrandChild";
 
-function ChildComponent({ onDataUpdate }) {
-  const [childData, setChildData] = useState("");
-
-  const handleChildDataChange = (newChildData) => {
-    setChildData(newChildData);
-    onDataUpdate(newChildData);
-  };
-
+function ChildComponent() {
+  // console.log("ChildProps",props)
   return (
-      <div>
-          <h1>Child Component</h1>
-      <input
-        type="text"
-        value={childData}
-        onChange={(e) => handleChildDataChange(e.target.value)}
-      />
+    <div>
+      {/* <h1>Child Component</h1> */}
+      <GrandChild />
+      {/* <h2>{ props.childUser}</h2> */}
     </div>
   );
 }
